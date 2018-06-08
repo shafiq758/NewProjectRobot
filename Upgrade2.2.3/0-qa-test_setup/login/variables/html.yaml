@@ -1,0 +1,14 @@
+login_html:
+  uri: PLATFORM/auth/login
+  button:
+    login:
+      text: Login
+  input:
+    username:
+      id: username
+    password:
+      id: password
+
+welcome_html:
+  uri: SOLUTION/root/index
+  uri_new: HOME/solution/index

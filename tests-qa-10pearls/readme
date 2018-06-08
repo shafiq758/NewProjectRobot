@@ -1,0 +1,15 @@
+Guidelines for adding automation test cases
+-------------------------------------------
+Please follow these guidelines when writing new automation test cases:
+
+1. Automation test cases must align with test cases on Test Rail. To do this, make sure the followings are in place
+   a. "Type" header on TestRail needs to change to "Automated" when it has been automated.
+   b. Add Tags in robot test cases to indicate test case number. e.g.[Tags]  C3068
+2. All test cases file need to be placed in "tests-qa" folder
+3. Do not modify any other file or folder as it may break our daily auto testing process. 
+4. Need to follow Gemini develop flow for submitting PR: 
+   a. Create ticket on JIRA
+   b. Create branch in the ticket and start working on that branch
+   c. Commit with changes
+   d. Create PR and assign reviewer for merging.
+   e. Close the ticket after merge is done.

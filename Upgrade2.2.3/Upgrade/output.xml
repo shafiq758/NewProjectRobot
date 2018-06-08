@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180314 14:26:00.570" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/farooqrasheed/Desktop/gemini-data/mgr-test-regression/tests-qa-1/Upgrade/upgrade.robot" id="s1" name="Upgrade">
+<test id="s1-t1" name="Valid login attempt with valid user">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://172.16.3.2</arg>
+<arg>Firefox</arg>
+</arguments>
+<msg timestamp="20180314 14:26:00.842" level="INFO">Opening browser 'Firefox' to base url 'https://172.16.3.2'.</msg>
+<status status="PASS" endtime="20180314 14:26:08.077" starttime="20180314 14:26:00.842"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20180314 14:26:08.078" level="INFO">Typing text 'admin' into text field 'id=username'.</msg>
+<status status="PASS" endtime="20180314 14:26:08.145" starttime="20180314 14:26:08.077"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>Demo12345</arg>
+</arguments>
+<msg timestamp="20180314 14:26:08.146" level="INFO">Typing text 'Demo12345' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20180314 14:26:08.214" starttime="20180314 14:26:08.146"></status>
+</kw>
+<kw name="Click Login Button" library="upgrade">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html/body/main/card/footer/button</arg>
+</arguments>
+<assign>
+<var>${present}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/main/card/footer/button</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180314 14:26:08.304" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-133.png"&gt;&lt;img src="selenium-screenshot-133.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180314 14:26:08.304" starttime="20180314 14:26:08.227"></status>
+</kw>
+<msg timestamp="20180314 14:26:08.306" level="FAIL">Element with locator 'xpath=/html/body/main/card/footer/button' not found.</msg>
+<status status="FAIL" endtime="20180314 14:26:08.306" starttime="20180314 14:26:08.216"></status>
+</kw>
+<msg timestamp="20180314 14:26:08.306" level="INFO">${present} = False</msg>
+<status status="PASS" endtime="20180314 14:26:08.306" starttime="20180314 14:26:08.216"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${present}</arg>
+<arg>Click Element</arg>
+<arg>xpath=html/body/main/card/footer/button</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:26:08.307" starttime="20180314 14:26:08.307"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html/body/main/card/footer/next/button</arg>
+</arguments>
+<assign>
+<var>${present}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/main/card/footer/next/button</arg>
+</arguments>
+<msg timestamp="20180314 14:26:08.343" level="INFO">Element 'xpath=/html/body/main/card/footer/next/button' is displayed.</msg>
+<status status="PASS" endtime="20180314 14:26:08.343" starttime="20180314 14:26:08.308"></status>
+</kw>
+<msg timestamp="20180314 14:26:08.343" level="INFO">${present} = True</msg>
+<status status="PASS" endtime="20180314 14:26:08.343" starttime="20180314 14:26:08.307"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${present}</arg>
+<arg>Click Element</arg>
+<arg>xpath=/html/body/main/card/footer/next/button</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/main/card/footer/next/button</arg>
+</arguments>
+<msg timestamp="20180314 14:26:08.345" level="INFO">Clicking element 'xpath=/html/body/main/card/footer/next/button'.</msg>
+<status status="PASS" endtime="20180314 14:26:10.375" starttime="20180314 14:26:08.345"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:26:10.375" starttime="20180314 14:26:08.344"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//aside//aside-wide//aside-packages//a[@href="/SOLUTION"]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:26:10.404" starttime="20180314 14:26:10.375"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:26:10.405" starttime="20180314 14:26:08.215"></status>
+</kw>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>SOLUTION/root/index</arg>
+</arguments>
+<msg timestamp="20180314 14:26:10.409" level="INFO">Current location contains 'SOLUTION/root/index'.</msg>
+<status status="PASS" endtime="20180314 14:26:10.410" starttime="20180314 14:26:10.405"></status>
+</kw>
+<kw type="teardown" name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:26:10.411" starttime="20180314 14:26:10.411"></status>
+</kw>
+<doc>For providing login, this is the precondition.</doc>
+<status status="PASS" endtime="20180314 14:26:10.411" critical="yes" starttime="20180314 14:26:00.841"></status>
+</test>
+<test id="s1-t2" name="Ugrade Version">
+<kw name="Navigate to Setting" library="upgrade">
+<doc>Going to setting screen</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/aside/aside-wide/aside-packages/a[@href="/PLATFORM"]/aside-package/img</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:26:10.438" starttime="20180314 14:26:10.414"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180314 14:26:15.439" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180314 14:26:15.440" starttime="20180314 14:26:10.439"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/aside/aside-wide/aside-packages/a[@href="/PLATFORM"]/aside-package/img</arg>
+</arguments>
+<msg timestamp="20180314 14:26:15.441" level="INFO">Clicking element 'xpath=/html/body/aside/aside-wide/aside-packages/a[@href="/PLATFORM"]/aside-package/img'.</msg>
+<status status="PASS" endtime="20180314 14:26:16.777" starttime="20180314 14:26:15.440"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:26:16.778" starttime="20180314 14:26:10.413"></status>
+</kw>
+<kw name="UpgradePack" library="upgrade">
+<doc>To Upload Upgrade Pack</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/page/main/segment[1]/actions/a/ico</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:26:16.813" starttime="20180314 14:26:16.780"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>xpath=/html/body/page/main/segment[1]/article/p/bold</arg>
+<arg>2.2.3-253</arg>
+</arguments>
+<msg timestamp="20180314 14:26:16.815" level="INFO">Verifying element 'xpath=/html/body/page/main/segment[1]/article/p/bold' contains exact text '2.2.3-253'.</msg>
+<status status="PASS" endtime="20180314 14:26:16.835" starttime="20180314 14:26:16.814"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/page/main/segment[1]/actions/a/ico</arg>
+</arguments>
+<msg timestamp="20180314 14:26:16.836" level="INFO">Clicking element 'xpath=/html/body/page/main/segment[1]/actions/a/ico'.</msg>
+<status status="PASS" endtime="20180314 14:26:16.908" starttime="20180314 14:26:16.835"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180314 14:26:21.909" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180314 14:26:21.909" starttime="20180314 14:26:16.908"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:26:21.910" starttime="20180314 14:26:16.779"></status>
+</kw>
+<kw name="Upload gemini-appliance-889.patch" library="upgrade">
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=upgrade_pack</arg>
+<arg>/home/farooqrasheed/Desktop/gemini-data/mgr-test-regression/tests-qa-1/Upgrade/Keywords/2.2.3to2.3/gemini-appliance-889.patch</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:26:21.942" starttime="20180314 14:26:21.911"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=btn_upload</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:26:21.966" starttime="20180314 14:26:21.942"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Upload</arg>
+</arguments>
+<msg timestamp="20180314 14:26:21.967" level="INFO">Clicking button 'Upload'.</msg>
+<status status="PASS" endtime="20180314 14:26:22.214" starttime="20180314 14:26:21.966"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=btn_upgrade</arg>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:26:22.467" starttime="20180314 14:26:22.214"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Upgrade</arg>
+</arguments>
+<msg timestamp="20180314 14:26:22.468" level="INFO">Clicking button 'Upgrade'.</msg>
+<status status="PASS" endtime="20180314 14:26:24.676" starttime="20180314 14:26:22.468"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>60s</arg>
+</arguments>
+<msg timestamp="20180314 14:27:24.678" level="INFO">Slept 1 minute</msg>
+<status status="PASS" endtime="20180314 14:27:24.678" starttime="20180314 14:26:24.677"></status>
+</kw>
+<kw name="Reload Page" library="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" endtime="20180314 14:27:26.242" starttime="20180314 14:27:24.678"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20180314 14:27:36.243" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20180314 14:27:36.244" starttime="20180314 14:27:26.242"></status>
+</kw>
+<kw name="Login To Web" library="upgrade">
+<doc>For providing login, this is the precondition.</doc>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20180314 14:27:36.246" level="INFO">Typing text 'admin' into text field 'id=username'.</msg>
+<status status="PASS" endtime="20180314 14:27:36.305" starttime="20180314 14:27:36.245"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>Demo12345</arg>
+</arguments>
+<msg timestamp="20180314 14:27:36.307" level="INFO">Typing text 'Demo12345' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20180314 14:27:36.380" starttime="20180314 14:27:36.306"></status>
+</kw>
+<kw name="Click Login Button" library="upgrade">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html/body/main/card/footer/button</arg>
+</arguments>
+<assign>
+<var>${present}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/main/card/footer/button</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180314 14:27:36.469" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-134.png"&gt;&lt;img src="selenium-screenshot-134.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180314 14:27:36.469" starttime="20180314 14:27:36.390"></status>
+</kw>
+<msg timestamp="20180314 14:27:36.470" level="FAIL">Element with locator 'xpath=/html/body/main/card/footer/button' not found.</msg>
+<status status="FAIL" endtime="20180314 14:27:36.470" starttime="20180314 14:27:36.382"></status>
+</kw>
+<msg timestamp="20180314 14:27:36.470" level="INFO">${present} = False</msg>
+<status status="PASS" endtime="20180314 14:27:36.470" starttime="20180314 14:27:36.381"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${present}</arg>
+<arg>Click Element</arg>
+<arg>xpath=html/body/main/card/footer/button</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:27:36.471" starttime="20180314 14:27:36.471"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=/html/body/main/card/footer/next/button</arg>
+</arguments>
+<assign>
+<var>${present}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/main/card/footer/next/button</arg>
+</arguments>
+<msg timestamp="20180314 14:27:36.501" level="INFO">Element 'xpath=/html/body/main/card/footer/next/button' is displayed.</msg>
+<status status="PASS" endtime="20180314 14:27:36.501" starttime="20180314 14:27:36.473"></status>
+</kw>
+<msg timestamp="20180314 14:27:36.502" level="INFO">${present} = True</msg>
+<status status="PASS" endtime="20180314 14:27:36.502" starttime="20180314 14:27:36.472"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${present}</arg>
+<arg>Click Element</arg>
+<arg>xpath=/html/body/main/card/footer/next/button</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/main/card/footer/next/button</arg>
+</arguments>
+<msg timestamp="20180314 14:27:36.503" level="INFO">Clicking element 'xpath=/html/body/main/card/footer/next/button'.</msg>
+<status status="PASS" endtime="20180314 14:27:39.046" starttime="20180314 14:27:36.503"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:27:39.046" starttime="20180314 14:27:36.502"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//aside//aside-wide//aside-packages//a[@href="/SOLUTION"]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:27:39.078" starttime="20180314 14:27:39.047"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:27:39.078" starttime="20180314 14:27:36.381"></status>
+</kw>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>SOLUTION/root/index</arg>
+</arguments>
+<msg timestamp="20180314 14:27:39.082" level="INFO">Current location contains 'SOLUTION/root/index'.</msg>
+<status status="PASS" endtime="20180314 14:27:39.083" starttime="20180314 14:27:39.079"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:27:39.083" starttime="20180314 14:27:36.244"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:27:39.083" starttime="20180314 14:26:21.910"></status>
+</kw>
+<kw name="Upload Upgrade Pack" library="upgrade">
+<doc>Finally Upload Upgrade Pack</doc>
+<kw name="Navigate to Setting" library="upgrade">
+<doc>Going to setting screen</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/aside/aside-wide/aside-packages/a[@href="/PLATFORM"]/aside-package/img</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:27:39.107" starttime="20180314 14:27:39.085"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180314 14:27:44.108" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180314 14:27:44.108" starttime="20180314 14:27:39.107"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/aside/aside-wide/aside-packages/a[@href="/PLATFORM"]/aside-package/img</arg>
+</arguments>
+<msg timestamp="20180314 14:27:44.109" level="INFO">Clicking element 'xpath=/html/body/aside/aside-wide/aside-packages/a[@href="/PLATFORM"]/aside-package/img'.</msg>
+<status status="PASS" endtime="20180314 14:27:45.297" starttime="20180314 14:27:44.109"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:27:45.297" starttime="20180314 14:27:39.084"></status>
+</kw>
+<kw name="UpgradePack" library="upgrade">
+<doc>To Upload Upgrade Pack</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/page/main/segment[1]/actions/a/ico</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:27:45.324" starttime="20180314 14:27:45.299"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>xpath=/html/body/page/main/segment[1]/article/p/bold</arg>
+<arg>2.2.3-253</arg>
+</arguments>
+<msg timestamp="20180314 14:27:45.325" level="INFO">Verifying element 'xpath=/html/body/page/main/segment[1]/article/p/bold' contains exact text '2.2.3-253'.</msg>
+<status status="PASS" endtime="20180314 14:27:45.342" starttime="20180314 14:27:45.324"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/page/main/segment[1]/actions/a/ico</arg>
+</arguments>
+<msg timestamp="20180314 14:27:45.343" level="INFO">Clicking element 'xpath=/html/body/page/main/segment[1]/actions/a/ico'.</msg>
+<status status="PASS" endtime="20180314 14:27:45.411" starttime="20180314 14:27:45.343"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180314 14:27:50.412" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180314 14:27:50.412" starttime="20180314 14:27:45.411"></status>
+</kw>
+<status status="PASS" endtime="20180314 14:27:50.412" starttime="20180314 14:27:45.298"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=upgrade_pack</arg>
+<arg>/home/farooqrasheed/Desktop/gemini-data/mgr-test-regression/tests-qa-1/Upgrade/Keywords/2.2.3to2.3/gemini-appliance-2.2-to-2.3.pack.v7</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:27:50.444" starttime="20180314 14:27:50.413"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=btn_upload</arg>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" endtime="20180314 14:27:50.464" starttime="20180314 14:27:50.444"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Upload</arg>
+</arguments>
+<msg timestamp="20180314 14:27:50.465" level="INFO">Clicking button 'Upload'.</msg>
+<status status="PASS" endtime="20180314 14:27:50.712" starttime="20180314 14:27:50.465"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>20m</arg>
+</arguments>
+<msg timestamp="20180314 14:47:50.714" level="INFO">Slept 20 minutes</msg>
+<status status="PASS" endtime="20180314 14:47:50.714" starttime="20180314 14:27:50.713"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Upgrade</arg>
+</arguments>
+<msg timestamp="20180314 14:47:50.715" level="INFO">Clicking button 'Upgrade'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180314 14:47:50.899" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-135.png"&gt;&lt;img src="selenium-screenshot-135.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180314 14:47:50.899" starttime="20180314 14:47:50.757"></status>
+</kw>
+<msg timestamp="20180314 14:47:50.919" level="FAIL">ElementNotInteractableException: Message: 
+</msg>
+<status status="FAIL" endtime="20180314 14:47:50.919" starttime="20180314 14:47:50.715"></status>
+</kw>
+<status status="FAIL" endtime="20180314 14:47:50.919" starttime="20180314 14:27:39.084"></status>
+</kw>
+<doc>Run Upgrade Script</doc>
+<status status="FAIL" endtime="20180314 14:47:50.919" critical="yes" starttime="20180314 14:26:10.412">ElementNotInteractableException: Message: 
+</status>
+</test>
+<status status="FAIL" endtime="20180314 14:47:50.921" starttime="20180314 14:26:00.572"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Upgrade" pass="1">Upgrade</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180314 14:26:00.702" level="WARN">Error in file '/home/farooqrasheed/Desktop/gemini-data/mgr-test-regression/tests-qa-1/Upgrade/Keywords/upgrade.robot': Invalid syntax in keyword 'UpgradePack': Setting 'Document' is deprecated. Use 'Documentation' instead.</msg>
+<msg timestamp="20180314 14:26:00.745" level="ERROR">Error in file '/home/farooqrasheed/Desktop/gemini-data/mgr-test-regression/test_resources/web.robot': Importing test library 'test_lib.utils.string' failed: ImportError: No module named test_lib.utils
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/farooqrasheed/Desktop/Gemini/env/bin
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/plat-x86_64-linux-gnu
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/lib-tk
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/lib-old
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/lib-dynload
+  /usr/lib/python2.7
+  /usr/lib/python2.7/plat-x86_64-linux-gnu
+  /usr/lib/python2.7/lib-tk
+  /home/farooqrasheed/Desktop/Gemini/env/local/lib/python2.7/site-packages
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/site-packages</msg>
+<msg timestamp="20180314 14:26:00.834" level="ERROR">Error in file '/home/farooqrasheed/Desktop/gemini-data/mgr-test-regression/test_resources/remote.robot': Importing test library 'test_lib.sbox' failed: ImportError: No module named test_lib
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/farooqrasheed/Desktop/Gemini/env/bin
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/plat-x86_64-linux-gnu
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/lib-tk
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/lib-old
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/lib-dynload
+  /usr/lib/python2.7
+  /usr/lib/python2.7/plat-x86_64-linux-gnu
+  /usr/lib/python2.7/lib-tk
+  /home/farooqrasheed/Desktop/Gemini/env/local/lib/python2.7/site-packages
+  /home/farooqrasheed/Desktop/Gemini/env/lib/python2.7/site-packages</msg>
+<msg timestamp="20180314 14:26:00.838" level="ERROR">Error in file '/home/farooqrasheed/Desktop/gemini-data/mgr-test-regression/tests-qa-1/Upgrade/upgrade.robot': Resource file '../../../test_resources/web.robot' does not exist.</msg>
+</errors>
+</robot>

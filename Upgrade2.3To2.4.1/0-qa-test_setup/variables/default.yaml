@@ -1,0 +1,11 @@
+setup_ssh_access_default:
+  api:
+    port: 4444
+    path: config
+  ssh_key:
+    public_key_file: output/ssh/id_rsa.pub
+    private_key_file: output/ssh/id_rsa
+    key_folder: output/ssh
+  ssh_cmd:
+    keygen: ssh-keygen -t rsa -N "" -f output/ssh/id_rsa
+    curl_cmd_prefix: curl -k -s -X POST -H "Content-Type:application/json"

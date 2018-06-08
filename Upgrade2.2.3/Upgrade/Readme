@@ -1,0 +1,9 @@
+*IMPORTANT POINTS*
+* Before starting Upgrade makesure Both master and child notes are installed and Node configuration is already setup between them.
+* You have to make this setup manually. 
+* Upgrade will be done in approx 30 mins if it does not get completed in this span of time check out your network as it might be the net issue.
+* After executing case for changing networking port we made our own setup for the headless browser named 'Setup Second Browser'
+
+- Download Splunk in Keyword folder 
+- Download Upgrade Pack in Keyword/2.2.3 folder 
+

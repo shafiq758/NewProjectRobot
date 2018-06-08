@@ -1,0 +1,53 @@
+eula_html:
+  uri: PLATFORM/eula/index
+  button:
+    accept:
+      text: Accept
+
+wizard_html:
+  localize:
+    uri: PLATFORM/wizard/localize
+    button:
+      next:
+        class: primary
+        text: Next
+  license:
+    uri: PLATFORM/wizard/license
+    button:
+      next:
+        id: btnNext
+  provisioning:
+    uri: PLATFORM/wizard/provisioning
+    button:
+      next:
+        id: btnNext
+  uno:
+    uri: PLATFORM/wizard/uno
+    button:
+      next:
+        id: btnNext
+  password:
+    uri: PLATFORM/wizard/password
+    button:
+      next:
+        text: Next
+    input:
+      password:
+        new:
+          id: admin_pwd
+        confirm:
+          id: admin_pwd_confirm
+  complete:
+    uri: PLATFORM/wizard/complete
+    button:
+      start:
+        text: Get Started
+
+set_member_html:
+  uri: UNO/root/setup
+  input:
+    token:
+      name: passphrase
+  button:
+    save:
+      text: Save

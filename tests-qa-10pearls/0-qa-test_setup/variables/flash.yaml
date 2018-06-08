@@ -1,0 +1,3 @@
+membership_flash:
+  msg:
+    success: Node settings have been updated.
